@@ -9,16 +9,17 @@ runtime: shiny
 ---
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(shiny)
+
 ```
 
 ```{r global, include=FALSE}
 # load data in 'global' chunk so it can be shared by all users of the dashboard
 library(ggplot2)
 library(tidyverse)
-library(shiny)
 
 
-wellness <- as_tibble(read_csv("/Users/kalebmathieu/Desktop/Wellbeing_raw_data/Wellness_working_directory/wellness survey/Likert_Dat_Cleaned.csv", 
+wellness <- readr::read_csv("/Users/kalebmathieu/Desktop/Wellness Dashboard/Likert_Dat_Cleaned.csv", 
     col_types = cols(HAPPY_1 = col_integer(), 
         HAPPY_2 = col_integer(), HAPPY_3 = col_integer(), 
         HAPPY_4 = col_integer(), ANX_1 = col_integer(), 
@@ -40,7 +41,7 @@ wellness <- as_tibble(read_csv("/Users/kalebmathieu/Desktop/Wellbeing_raw_data/W
         RACE_2 = col_character(), RACE_3 = col_character(), 
         RACE_4 = col_character(), RACE_5 = col_character(), 
         PAREDU = col_character(), GPA = col_character()), 
-    na = "NA"))
+    na = "NA")
 
 dataset <- wellness
 ```
