@@ -1,5 +1,5 @@
 ---
-title: "TAMUC Wellness Data Explorer"
+title: "flexdashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
