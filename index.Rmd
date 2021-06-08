@@ -65,7 +65,7 @@ selectInput('facet_col', 'Facet Column',
 Outputs
 -----------------------------------------------------------------------
 
-### Diamonds
+### Wellness Survey
 
 ```{r}
 
