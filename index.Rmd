@@ -6,15 +6,17 @@ output:
     social: menu
     source_code: embed
 runtime: shiny
-output_dir: docs
 ---
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
 
 ```{r global, include=FALSE}
 # load data in 'global' chunk so it can be shared by all users of the dashboard
 library(ggplot2)
 library(tidyverse)
 library(shiny)
-library(flexdashboard)
+
 
 wellness <- as_tibble(read_csv("/Users/kalebmathieu/Desktop/Wellbeing_raw_data/Wellness_working_directory/wellness survey/Likert_Dat_Cleaned.csv", 
     col_types = cols(HAPPY_1 = col_integer(), 
